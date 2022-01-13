@@ -18,7 +18,9 @@ This guide will show you how to use the Nios II CLI, and create/run Nios II C pr
 
 * **You may have to modify the `Utilities/nios2-cli` script if your Nios II installation directory is not `C:\intelFPGA_lite\21.1\nios2eds\`. See lines 3-4 of the `nios2-cli` script.**
 
-* **Whenever specifying a directory path in a command, it is best to always use relative paths to avoid compatibility issues between Linux and Windows path formats. Additionally, a lot of the Nios II tools can't handle whitespace in paths because whoever made them wants to watch the world burn.**
+* **A lot of the Nios II tools can't handle whitespace in paths because whoever made them wants to watch the world burn. This means you must install the utility scripts and keep all your projects in a directory that contains no spaces in its full path.**
+
+* **Whenever specifying a directory path in a command, it is best to always use relative paths to avoid compatibility issues between Linux and Windows path formats.**
 
 ## Using the Nios II CLI
 
