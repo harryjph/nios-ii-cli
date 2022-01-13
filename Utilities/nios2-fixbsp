@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+bspPath="$1"
+makefile="$bspPath/Makefile"
+sed -i "s/Makefile \\\$(GENERATED_FILES)/Makefile/g" "$makefile"

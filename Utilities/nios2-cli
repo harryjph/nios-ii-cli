@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# You may have to change this if your Nios II installation directory is different! Don't forget that, as this is a bash script, backslashes must be escaped!
+nios2Directory="C:\\intelFPGA_lite\\21.1\\nios2eds\\"
+
+# The script checks for the string "Microsoft" in /proc/version in order to select the correct GCC directory.
+# On non-WSL, this won't work.
+# We need to modify the script because of this.
+
+# Create our own copy of the script
+neosDir=$(cygpath "$nios2Directory")
+scriptDir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+scriptPath="${neosDir}nios2_command_shell.sh"
+cp "$neosDir/nios2_command_shell.sh" "$scriptDir"
+
+# Fool the script into thinking it's in the right place and make the Windows check always return true - we're always gonna be on Windows
+sed -i -E -e "s/_this_nios2_command_shell_script=.+/_this_nios2_command_shell_script=\"${scriptPath//\//\\/}\"/" -e "s/grep -q Microsoft \/proc\/version/true/g" "$scriptDir/nios2_command_shell.sh"
+
+"$scriptDir/nios2_command_shell.sh" "$@"
