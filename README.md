@@ -10,7 +10,7 @@ This guide will show you how to use the Nios II CLI, and create/run Nios II C pr
 
 ## Setup
 
-1. Clone this repository
+1. Clone this repository **(TO A PATH THAT CONTAINS NO SPACES - See "Gotchas" below)**
 2. Add the `Utilities` directory to `%PATH`
 3. When you want to start a Nios II CLI session, open a Bash terminal and run `nios2-cli`
 
