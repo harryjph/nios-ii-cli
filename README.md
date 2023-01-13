@@ -5,7 +5,7 @@ This guide will show you how to use the Nios II CLI, and create/run Nios II C pr
 ## Prerequisites
 
 * Windows (duh)
-* Quartus Prime Lite (if you have a version other than `21.1` you will need to modify one of the utility scripts, see "Gotchas" below)
+* Quartus Prime Lite (if you have a version other than `20.1` you will need to modify one of the utility scripts, see "Gotchas" below)
 * A `bash` terminal
 
 ## Setup
@@ -16,7 +16,7 @@ This guide will show you how to use the Nios II CLI, and create/run Nios II C pr
 
 ## Gotchas
 
-* **You may have to modify the `Utilities/nios2-cli` script if your Nios II installation directory is not `C:\intelFPGA_lite\21.1\nios2eds\`. See lines 3-4 of the `nios2-cli` script.**
+* **You may have to modify the `Utilities/nios2-cli` script if your Nios II installation directory is not `C:\intelFPGA_lite\20.1\nios2eds\`. See lines 3-4 of the `nios2-cli` script.**
 
 * **A lot of the Nios II tools can't handle whitespace in paths because whoever made them wants to watch the world burn. This means you must install the utility scripts and keep all your projects in a directory that contains no spaces in its full path.**
 

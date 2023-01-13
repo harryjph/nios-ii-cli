@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # You may have to change this if your Nios II installation directory is different! Don't forget that, as this is a bash script, backslashes must be escaped!
-nios2Directory="C:\\intelFPGA_lite\\21.1\\nios2eds\\"
+nios2Directory="C:\\intelFPGA_lite\\20.1\\nios2eds\\"
 
 # The script checks for the string "Microsoft" in /proc/version in order to select the correct GCC directory.
 # On non-WSL, this won't work.
